@@ -3,51 +3,116 @@
     "blocks": [
         {
             "alignment": "left",
+            "newline": true,
             "segments": [
                 {
-                    "type": "root",
-                    "style": "powerline",
-                    "powerline_symbol": "\ue0b0",
-                    "template": "\uf0e7",
-                    "background": "#03385f",
-                    "foreground": "#19012b"
-                },
-                {
-                    "type": "session",
-                    "style": "powerline",
-                    "powerline_symbol": "\ue0b0",
-                    "template": " {{ .UserName }}@{{ .HostName }} ",
+                    "type": "os",
+                    "style": "plain",
+                    "template": " {{ .Icon }} ",
                     "background": "#c12343",
                     "foreground": "#f5ffa2"
                 },
                 {
-                    "type": "path",
-                    "style": "powerline",
-                    "powerline_symbol": "\ue0b0",
-                    "template": " {{ .Path }} ",
+                    "type": "session",
+                    "style": "diamond",
+                    "trailing_diamond": "\ue0b0",
+                    "template": "nh2seven@omen16 ",
                     "properties": {
-                        "folder_icon": "\uf115",
-                        "folder_separator_icon": " \ue0b1 ",
-                        "style": "full"
+                        "display_host": true
                     },
-                    "background": "#004f82",
-                    "foreground": "#dfded7"
+                    "background": "#c12343",
+                    "foreground": "#f5ffa2"
                 },
                 {
-                    "type": "git",
-                    "style": "powerline",
-                    "powerline_symbol": "\ue0b0",
-                    "template": " {{ .HEAD }} ",
-                    "background": "#ffffff",
-                    "foreground": "#000039"
+                    "background": "#fe4424",
+                    "foreground": "#ffffff",
+                    "style": "diamond",
+                    "trailing_diamond": "\ue0b0",
+                    "template": " <#fff>\uf120</>  ",
+                    "type": "shell"
                 },
                 {
                     "type": "status",
-                    "style": "powerline",
-                    "powerline_symbol": "\ue0b0",
-                    "template": " \ue20f ",
+                    "style": "diamond",
+                    "trailing_diamond": "\ue0b0",
+                    "template": " \ue20f  ",
                     "background": "#fe4424",
                     "foreground": "#ffffff"
+                },
+                {
+                    "type": "git",
+                    "style": "diamond",
+                    "trailing_diamond": "\ue0b0",
+                    "template": " <#000039>{{ .UpstreamIcon }}</>{{ .HEAD }} ",
+                    "properties": {
+                        "branch_icon": "\ue725 ",
+                        "fetch_stash_count": true,
+                        "fetch_status": true,
+                        "fetch_upstream_icon": true,
+                        "fetch_worktree_count": true
+                    },
+                    "background": "#dfded7",
+                    "foreground": "#000039"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "right",
+            "segments": [
+                {
+                    "background": "transparent",
+                    "foreground": "#fff",
+                    "properties": {
+                        "style": "dallas",
+                        "threshold": 0
+                    },
+                    "style": "diamond",
+                    "template": " <#dfded7>{{ .FormattedMs }}s</> <#ff6c3d>\udb80\udddd</>",
+                    "type": "executiontime"
+                },
+                {
+                    "foreground": "#659ab6",
+                    "properties": {
+                        "time_format": "Monday <#659ab6>at</> 3:04 PM"
+                    },
+                    "style": "diamond",
+                    "template": " {{ .CurrentDate | date .Format }} ",
+                    "type": "time"
+                },
+                {
+                    "properties": {
+                        "root_icon": "\uf292"
+                    },
+                    "style": "diamond",
+                    "template": " \uf0e7",
+                    "type": "root"
+                },
+                {
+                    "foreground": "#BBC4B9",
+                    "style": "diamond",
+                    "template": " <#fff>\ue718</> {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+                    "type": "node"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "segments": [
+                {
+                    "type": "path",
+                    "style": "diamond",
+                    "trailing_diamond": "\ue0b0",
+                    "template": " \ue5ff {{ .Path }} ",
+                    "properties": {
+                        "folder_icon": "\\",
+                        "folder_separator_icon": " \\ ",
+                        "home_icon": "~",
+                        "style": "agnoster_full"
+                    },
+                    "background": "#004f82",
+                    "foreground": "#dfded7"
                 },
                 {
                     "type": "python",
@@ -59,20 +124,7 @@
                 }
             ],
             "type": "prompt"
-        },
-        {
-            "alignment": "left",
-            "newline": true,
-            "segments": [
-                {
-                    "type": "text",
-                    "style": "plain",
-                    "template": "\u276f",
-                    "foreground": "#007ACC"
-              }
-            ],
-            "type": "prompt"
-          }
+        }
     ],
     "final_space": true,
     "version": 2
