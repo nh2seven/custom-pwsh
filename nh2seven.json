@@ -10,7 +10,7 @@
                     "style": "plain",
                     "template": " {{ .Icon }} ",
                     "background": "#c12343",
-                    "foreground": "#f5ffa2"
+                    "foreground": "#f8ffba"
                 },
                 {
                     "type": "session",
@@ -21,15 +21,7 @@
                         "display_host": true
                     },
                     "background": "#c12343",
-                    "foreground": "#f5ffa2"
-                },
-                {
-                    "background": "#fe4424",
-                    "foreground": "#ffffff",
-                    "style": "diamond",
-                    "trailing_diamond": "\ue0b0",
-                    "template": " <#fff>\uf120</>  ",
-                    "type": "shell"
+                    "foreground": "#f8ffba"
                 },
                 {
                     "type": "status",
@@ -74,25 +66,19 @@
                 {
                     "foreground": "#659ab6",
                     "properties": {
-                        "time_format": "Monday <#659ab6>at</> 3:04 PM"
+                        "time_format": "Monday at 15:04:05 <#ff6c3d>\udb80\udddd</>"
                     },
                     "style": "diamond",
                     "template": " {{ .CurrentDate | date .Format }} ",
                     "type": "time"
                 },
                 {
-                    "properties": {
-                        "root_icon": "\uf292"
-                    },
+                    "background": "transparent",
+                    "foreground": "#ffffff",
                     "style": "diamond",
-                    "template": " \uf0e7",
-                    "type": "root"
-                },
-                {
-                    "foreground": "#BBC4B9",
-                    "style": "diamond",
-                    "template": " <#fff>\ue718</> {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
-                    "type": "node"
+                    "trailing_diamond": "\ue0b0",
+                    "template": "\uf120 {{ .Name }}",
+                    "type": "shell"
                 }
             ],
             "type": "prompt"
@@ -113,14 +99,6 @@
                     },
                     "background": "#004f82",
                     "foreground": "#dfded7"
-                },
-                {
-                    "type": "python",
-                    "style": "powerline",
-                    "powerline_symbol": "\ue0b0",
-                    "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
-                    "background": "#906cff",
-                    "foreground": "#100e23"
                 }
             ],
             "type": "prompt"
