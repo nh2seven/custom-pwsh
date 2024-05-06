@@ -12,8 +12,8 @@ Welcome to my personal PowerShell configuration. This work-in-progress repo will
 3. Run `setup.ps1` (will be added in a later commit)
 4. Open a new PowerShell window and enjoy your new prompt!
 ### Screenshots
-- [Default Prompt](Screenshots\DefaultPrompt.png)
-- [Desktop View](Screenshots\DesktopView.png)
+- [Default Prompt](https://github.com/nh2seven/custom-pwsh/blob/08d116bce8a386bda79b7a7a1dd39aaf125e144a/Screenshots/DefaultPrompt.png)
+- [Desktop View](https://github.com/nh2seven/custom-pwsh/blob/08d116bce8a386bda79b7a7a1dd39aaf125e144a/Screenshots/DesktopView.png)
 ### References
 1. [PowerShell 7.x](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4)
 2. [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
